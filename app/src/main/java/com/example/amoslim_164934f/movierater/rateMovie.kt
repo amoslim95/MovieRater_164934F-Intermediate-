@@ -26,7 +26,7 @@ class rateMovie : AppCompatActivity() {
         val movieLaugUser = intent.getStringExtra("movieLaugUser")
 
         val newMovie = Movie(movieTitle, movieDescription, releaseDate, movieLanguage, notSuitable, movieViolence, movieLaugUser)
-     
+
 
         rate_text_title.setText(movieTitle)
 
