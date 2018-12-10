@@ -37,7 +37,6 @@ class ViewMovieDetail : AppCompatActivity() {
         viotxt.setText(newMovie.movieViolence)
         lantxt.setText(newMovie.movieLaugUser)
 
-
         registerForContextMenu(txtMovieReview)
 
         val actionbar = supportActionBar
@@ -70,15 +69,14 @@ class ViewMovieDetail : AppCompatActivity() {
 
             val intent = Intent(this, rateMovie::class.java)
 
-            intent.putExtra("movieTitle",NameText.toString() )
-            intent.putExtra("movieDescription",  ovtext.toString())
-            intent.putExtra("releaseDate",DateText.toString() )
-            intent.putExtra("movieLanguage", langtxt.toString())
-            intent.putExtra("notSuitable",suitabletxt.toString())
-            intent.putExtra("movieViolence",viotxt.toString())
-            intent.putExtra("movieLaugUser",lantxt.toString())
+            intent.putExtra("movieTitle",NameText.text.toString() )
+            intent.putExtra("movieDescription",  ovtext.text.toString())
+            intent.putExtra("releaseDate",DateText.text.toString() )
+            intent.putExtra("movieLanguage", langtxt.text.toString())
+            intent.putExtra("notSuitable",suitabletxt.text.toString())
+            intent.putExtra("movieViolence",viotxt.text.toString())
+            intent.putExtra("movieLaugUser",lantxt.text.toString())
             startActivityForResult(intent, 1)
-
 
         }
         return super.onContextItemSelected(item)
@@ -94,10 +92,6 @@ class ViewMovieDetail : AppCompatActivity() {
                 // disable user input
                 ratestar.setIsIndicator(true);
 
-
-
-            //val movieRating = intent.getFloatExtra("movieRating", 0.0f)
-
                 //get value from rateMovie
 
 
@@ -106,11 +100,6 @@ class ViewMovieDetail : AppCompatActivity() {
 
                 val ratemovieText = data!!.getStringExtra ("movieRatintxt")
                   rate_movie_txt.setText(ratemovieText)
-
-
-                // rate_movie_txt.setText("testest")
-
-
             }
         }
     }

@@ -105,7 +105,7 @@ class AddMovie : AppCompatActivity() {
                     }
 
                     // Show Toast Display
-                    Toast.makeText(applicationContext, "Title = ${titlename}"
+                    /*Toast.makeText(applicationContext, "Title = ${titlename}"
                             + "\n" + "Overview = ${desc}"
                             + "\n" + "Release date = ${resdate}"
                             + "\n" + "Lauguage = ${laugauge}"
@@ -113,7 +113,7 @@ class AddMovie : AppCompatActivity() {
                             + "\n" + "Reason: ${NoReason} "
                             + "\n" + "${reasonLang}"
                             + "\n" + "${reasonVio}"
-                            , Toast.LENGTH_SHORT).show()
+                            , Toast.LENGTH_SHORT).show()*/
 
                     if(audichecked == true.toString())
                     {
@@ -121,7 +121,6 @@ class AddMovie : AppCompatActivity() {
                     }
                     else
                         notsuit = "Yes"
-
 
 
                     val intent = Intent(this,ViewMovieDetail::class.java)

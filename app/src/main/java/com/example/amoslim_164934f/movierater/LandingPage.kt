@@ -26,10 +26,7 @@ class LandingPage : AppCompatActivity() {
 
         if (v?.id == R.id.tvDemo)
             menu?.add(1, 1001, 1, "Add")
-
-
     }
-
 
     override fun onContextItemSelected(item: MenuItem?): Boolean {
 
